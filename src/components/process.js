@@ -32,7 +32,7 @@ export function processCards(phases) {
   return html`${phases.map(({ id, title, summary, cardTitle, activities, details, stack: used, background, image, layout }) => html`<section class=${`section section-${id}`} style=${colors(background)}>
     ${image ? html`<img class="d-block img-fluid mb-6" src=${image} alt="" loading="lazy">` : null}
     <div class=${`row${layout === "reverse" ? " md:flex-row-reverse" : ""}`}>
-      <header class="">
+      <header>
         <h3>${title}</h3>
         <p><em>${summary}</em></p>
       </header>

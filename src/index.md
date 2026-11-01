@@ -6,7 +6,7 @@ title: "Hermes Carretero - Personal site"
 
 <section class="workspace-pane workspace-about bg-inverse fg-white">
 
-<header class="">
+<header>
 
 # Hermes Carretero
 ### Professional Web Portfolio
