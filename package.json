@@ -9,6 +9,7 @@
     "prebuild": "npm run icons && npm run footer",
     "build": "observable build",
     "dev": "observable preview",
+    "dev:local": "npm link ../design-system && npm run dev",
     "deploy": "observable deploy",
     "observable": "observable"
   },

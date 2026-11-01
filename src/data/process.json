@@ -2,8 +2,9 @@
   {
     "id": "explore",
     "title": "Explore",
-    "summary": "Understand and research the project, the user, the business market, and the wide context. Gather information, empathize, and find inspiration.",
+    "summary": "Understand and research the project, the user, the business market, and the wide context.",
     "cardTitle": "Discovery & Inspiration",
+    "cardDescription": "Gather information, empathize, and find inspiration.",
     "activities": [
       "Define requirements, constraints, and goals",
       "Research references, competitors, and similar products",
@@ -21,8 +22,9 @@
   {
     "id": "define",
     "title": "Define",
-    "summary": "Synthesize exploration findings to frame the problem and sketch early solutions. Shape user flows, interactions, and screen structure.",
+    "summary": "Synthesize exploration findings to frame the problem and sketch early solutions.",
     "cardTitle": "Prototype & Co-design",
+    "cardDescription": "Shape user flows, interactions, and screen structure.",
     "activities": [
       "Build information architecture",
       "Define layouts and user flows",
@@ -40,8 +42,9 @@
   {
     "id": "design",
     "title": "Design",
-    "summary": "Bring ideas to life. Create high-fidelity prototypes, test with users, gather feedback, and refine.",
+    "summary": "Bring ideas to life.",
     "cardTitle": "Visual & Interaction Design",
+    "cardDescription": "Create high-fidelity prototypes, test with users, gather feedback, and refine.",
     "activities": [
       "Design main screens and interactions",
       "Build prototypes to test flows",
@@ -59,8 +62,9 @@
   {
     "id": "integrate",
     "title": "Integrate",
-    "summary": "Merge designs with development. Validate in context, refine based on feedback, and prepare for launch.",
+    "summary": "Merge designs with development.",
     "cardTitle": "Development & Validation",
+    "cardDescription": "Validate in context, refine based on feedback, and prepare for launch.",
     "activities": [
       "Integrate design with development team",
       "Test and validate integration",
@@ -80,8 +84,9 @@
   {
     "id": "deliver",
     "title": "Deliver",
-    "summary": "Launch the product, monitor performance, collect feedback, and iterate. Continuous delivery enables continuous improvement.",
+    "summary": "Launch the product, monitor performance, collect feedback, and iterate.",
     "cardTitle": "Deployment & Iteration",
+    "cardDescription": "Continuous delivery enables continuous improvement.",
     "activities": [
       "Deploy to users via CI/CD pipeline",
       "Monitor product and web analytics",

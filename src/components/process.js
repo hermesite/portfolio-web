@@ -18,6 +18,7 @@ function colors(background) {
  *   title: string,
  *   summary: string,
  *   cardTitle?: string,
+ *   cardDescription?: string,
  *   activities: string[],
  *   details?: Record<string, string>,
  *   stack?: Parameters<typeof stack>[0],
@@ -29,21 +30,22 @@ function colors(background) {
  * A local `image` is only copied to the build when it is listed in `dynamicPaths` in the config.
  */
 export function processCards(phases) {
-  return html`${phases.map(({ id, title, summary, cardTitle, activities, details, stack: used, background, image, layout }) => html`<section class=${`section section-${id}`} style=${colors(background)}>
+  return html`${phases.map(({ id, title, summary, cardTitle, cardDescription, activities, details, stack: used, background, image, layout }) => html`<section class=${`section section-${id}`} style=${colors(background)}>
     ${image ? html`<img class="d-block img-fluid mb-6" src=${image} alt="" loading="lazy">` : null}
-    <div class=${`row${layout === "reverse" ? " md:flex-row-reverse" : ""}`}>
       <header>
-        <h3>${title}</h3>
-        <p><em>${summary}</em></p>
+        <h2>${title}</h2>
+        <p class="mb-0"><em>${summary}</em></p>
       </header>
       <div class="process-card-body bg-muted-secondary bg-20">
-        <h4>${cardTitle ?? "Key Activities"}</h4>
+        <h3>${cardTitle ?? "Key Activities"}</h3>
+        <p><em>${cardDescription ?? ""}</em></p>
         <ul class="section-activities">${activities.map((activity) => html`<li class="section-activity">${activity}</li>`)}</ul>
       </div>
-    </div>
-    ${details ? html`<table class="table">
-      <tbody>${Object.entries(details).map(([label, value]) => html`<tr><th>${label}</th><td>${value}</td></tr>`)}</tbody>
-    </table>` : null}
-    ${used ? html`<div class="section-stack w-100">${stack(used)}</div>` : null}
+      <div class="process-card-body pt-0">
+        ${details ? html`<table class="table mb-0">
+          <tbody>${Object.entries(details).map(([label, value]) => html`<tr><th class="bg-transparent fg-white">${label}</th><td class="bg-transparent fg-white">${value}</td></tr>`)}</tbody>
+        </table>` : null}
+        ${used ? html`<div class="section-stack text-end fg-white">${stack(used)}</div>` : null}
+      </div>
   </section>`)}`;
 }

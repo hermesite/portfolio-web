@@ -62,6 +62,7 @@ The navbar (`#main-navbar`) shows the last git tag and the build date on its rig
 | ----------------- | -------------------------------------------------------- |
 | `npm install`            | Install or reinstall dependencies                        |
 | `npm run dev`        | Start local preview server                               |
+| `npm run dev:local`  | Link the local `../design-system` and start the preview, so its CSS edits show up (re-link after `npm install`) |
 | `npm run build`      | Build your static site, generating `./dist`              |
 | `npm run deploy`     | Deploy your app to Observable                            |
 | `npm run clean`      | Clear the local data loader cache                        |
