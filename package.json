@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf src/.observablehq/cache",
+    "icons": "node -e \"const f='src/data/icons.json.js',t=new Date();require('fs').utimesSync(f,t,t)\"",
+    "footer": "node -e \"const f='src/data/footer.json.js',t=new Date();require('fs').utimesSync(f,t,t)\"",
+    "predev": "npm run icons && npm run footer",
+    "prebuild": "npm run icons && npm run footer",
+    "build": "observable build",
+    "dev": "observable preview",
+    "deploy": "observable deploy",
+    "observable": "observable"
+  },
+  "dependencies": {
+    "@observablehq/framework": "^1.13.4",
+    "d3-dsv": "^3.0.1",
+    "d3-time-format": "^4.1.0",
+    "design-system": "github:hermesite/design-system",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-icons": "^5.7.0"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

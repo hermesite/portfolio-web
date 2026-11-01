@@ -1,0 +1,100 @@
+[
+  {
+    "id": "explore",
+    "title": "Explore",
+    "summary": "Understand and research the project, the user, the business market, and the wide context. Gather information, empathize, and find inspiration.",
+    "cardTitle": "Discovery & Inspiration",
+    "activities": [
+      "Define requirements, constraints, and goals",
+      "Research references, competitors, and similar products",
+      "Analyse audiences and their needs",
+      "Draw inspiration from other fields"
+    ],
+    "details": {
+      "Outcomes": "Mindmaps, Hand drawn sketches, Whiteboard sessions, Paper and pencil"
+    },
+    "stack": { "tools": ["notion", "trello"] },
+    "background": null,
+    "image": null,
+    "layout": "default"
+  },
+  {
+    "id": "define",
+    "title": "Define",
+    "summary": "Synthesize exploration findings to frame the problem and sketch early solutions. Shape user flows, interactions, and screen structure.",
+    "cardTitle": "Prototype & Co-design",
+    "activities": [
+      "Build information architecture",
+      "Define layouts and user flows",
+      "Sketch main screens and interactions",
+      "Iterate with users and stakeholders"
+    ],
+    "details": {
+      "Outcomes": "Wireframing, Storyboarding, Low-fidelity prototyping"
+    },
+    "stack": { "tools": ["figma", "sketch", "adobe"] },
+    "background": null,
+    "image": null,
+    "layout": "reverse"
+  },
+  {
+    "id": "design",
+    "title": "Design",
+    "summary": "Bring ideas to life. Create high-fidelity prototypes, test with users, gather feedback, and refine.",
+    "cardTitle": "Visual & Interaction Design",
+    "activities": [
+      "Design main screens and interactions",
+      "Build prototypes to test flows",
+      "Create design systems and style guides",
+      "Test with users and stakeholders"
+    ],
+    "details": {
+      "Outcomes": "High-fidelity prototypes, Interactive mockups, Design systems, Style guides"
+    },
+    "stack": { "tools": ["figma", "sketch", "adobe", "invision"] },
+    "background": null,
+    "image": null,
+    "layout": "default"
+  },
+  {
+    "id": "integrate",
+    "title": "Integrate",
+    "summary": "Merge designs with development. Validate in context, refine based on feedback, and prepare for launch.",
+    "cardTitle": "Development & Validation",
+    "activities": [
+      "Integrate design with development team",
+      "Test and validate integration",
+      "Refine based on user and team feedback",
+      "Plan deployment and launch"
+    ],
+    "details": {
+      "Outcomes": "Usability testing, User feedback loops, Design iteration"
+    },
+    "stack": {
+      "tools": ["visualstudiocode", "bruno", "copilot", "html", "css", "javascript", "typescript", "d3", "react", "tailwind", "python", "git"]
+    },
+    "background": null,
+    "image": null,
+    "layout": "reverse"
+  },
+  {
+    "id": "deliver",
+    "title": "Deliver",
+    "summary": "Launch the product, monitor performance, collect feedback, and iterate. Continuous delivery enables continuous improvement.",
+    "cardTitle": "Deployment & Iteration",
+    "activities": [
+      "Deploy to users via CI/CD pipeline",
+      "Monitor product and web analytics",
+      "Collect user feedback for next iteration",
+      "Plan continuous improvements"
+    ],
+    "details": {
+      "Outcomes": "Production deployment, Analytics dashboards, Feedback collection",
+      "Methods": "Post-launch monitoring, Continuous improvement, User feedback loops"
+    },
+    "stack": { "tools": ["github", "vercel", "notion", "trello"] },
+    "background": null,
+    "image": null,
+    "layout": "default"
+  }
+]
