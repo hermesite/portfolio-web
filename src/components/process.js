@@ -45,7 +45,7 @@ export function processCards(phases) {
         ${details ? html`<table class="table mb-0">
           <tbody>${Object.entries(details).map(([label, value]) => html`<tr><th class="bg-transparent fg-white">${label}</th><td class="bg-transparent fg-white">${value}</td></tr>`)}</tbody>
         </table>` : null}
-        ${used ? html`<div class="section-stack text-end fg-white">${stack(used)}</div>` : null}
+        ${used ? html`<div class="section-stack text-end">${stack(used)}</div>` : null}
       </div>
   </section>`)}`;
 }
