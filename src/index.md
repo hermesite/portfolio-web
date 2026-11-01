@@ -9,7 +9,14 @@ title: "Hermes Carretero - Personal site"
 <header>
 
 # Hermes Carretero
-### Professional Web Portfolio
+### Professional Portfolio
+
+```js
+import {stack} from "/components/stack.js";
+display(stack({
+  disciplines: ["dataviz", "ux", "ui", "frontend", "design", "aidev", "gis"],
+}));
+```
 
 I am a **senior UX designer** and passionate about **data visualization** based in Barcelona with over 20 years' experience in designing and implementing digital products.
 
@@ -18,7 +25,6 @@ Since 2010, I have specialised in data visualisation and complex interaction des
 </header>
 
 ```js
-  import {stack} from "/components/stack.js";
 display(stack({
   social: ["linkedin", "github"],
 }));

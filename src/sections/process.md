@@ -3,7 +3,6 @@ title: "Process"
 ---
 
 ```js
-import {stack} from "../components/stack.js";
 import {processCards} from "../components/process.js";
 ```
 
@@ -12,12 +11,6 @@ import {processCards} from "../components/process.js";
 
 - Note 1: Add reference to the paper published about RIS3-MCAT (link)
 - Note 2: Add a reference to the paper and the cosmograph usage
-
-```js
-display(stack({
-  disciplines: ["dataviz", "ux", "ui", "frontend", "design", "aidev", "gis"],
-}));
-```
 
 </header>
 

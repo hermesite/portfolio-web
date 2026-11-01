@@ -58,14 +58,14 @@ export function stack(used) {
         const filled = category === "disciplines" && color;
         const style = color ? `--stack-color: ${color}${filled ? `; --stack-ink: ${ink(color)}` : ""}` : null;
         const base = "stack-item d-inline-flex align-items-center gap-3 m-0";
-        const itemClass = mark ? `${base} stack-item-icon` : filled ? `${base} stack-item-filled px-5 py-1 h5` : `${base} px-5 py-1`;
+        const itemClass = mark ? `${base} stack-item-icon` : filled ? `${base} stack-item-outline badge badge-outline fs-md` : `${base} px-5 py-1`;
         // Icon-only items keep the label for tooltips and screen readers.
         const content = [
           mark || (color && !filled ? html`<span class="stack-dot rounded-circle flex-shrink-0" aria-hidden="true"></span>` : null),
           mark ? html`<span class="visually-hidden">${label}</span>` : label
         ];
         return html`<li class=${itemClass} title=${mark ? label : null} style=${style}>
-          ${link ? html`<a class="d-inline-flex align-items-center gap-3 fg-reset text-decoration-none" href=${link} target="_blank" rel="noopener noreferrer">${content}</a>` : content}
+          ${link ? html`<a class="d-inline-flex align-items-center gap-3 fg-reset text-decoration-none" href=${link} target="_blank" rel="noopener noreferrer">${content}</a>` : html`<span class="fw-normal text-uppercase text-muted">#${content}</span>`}
         </li>`;
       }
     )}</ul>
