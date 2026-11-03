@@ -65,7 +65,7 @@ export function stack(used) {
           mark ? html`<span class="visually-hidden">${label}</span>` : label
         ];
         return html`<li class=${itemClass} title=${mark ? label : null} style=${style}>
-          ${link ? html`<a class="d-inline-flex align-items-center gap-3 fg-reset text-decoration-none" href=${link} target="_blank" rel="noopener noreferrer">${content}</a>` : html`<span class="fw-normal text-uppercase text-muted">#${content}</span>`}
+          ${link ? html`<a class="d-inline-flex align-items-center gap-3 fg-reset text-decoration-none" href=${link} target="_blank" rel="noopener noreferrer">${content}</a>` : html`<span class="fw-normal text-uppercase text-muted">${content}</span>`}
         </li>`;
       }
     )}</ul>

@@ -12,12 +12,14 @@
       "Draw inspiration from other fields"
     ],
     "details": {
-      "Outcomes": "Mindmaps, Hand drawn sketches, Whiteboard sessions, Paper and pencil"
+      "Outcomes": "Mindmaps, Hand drawn sketches, Whiteboard sessions, Paper and pencil, Canvas"
     },
-    "stack": { "tools": ["notion", "trello"] },
-    "background": null,
-    "image": null,
-    "layout": "default"
+    "stack": {
+      "tools": [
+        "notion",
+        "trello"
+      ]
+    }
   },
   {
     "id": "define",
@@ -34,10 +36,13 @@
     "details": {
       "Outcomes": "Wireframing, Storyboarding, Low-fidelity prototyping"
     },
-    "stack": { "tools": ["figma", "sketch", "adobe"] },
-    "background": null,
-    "image": null,
-    "layout": "reverse"
+    "stack": {
+      "tools": [
+        "figma",
+        "sketch",
+        "adobe"
+      ]
+    }
   },
   {
     "id": "design",
@@ -54,10 +59,14 @@
     "details": {
       "Outcomes": "High-fidelity prototypes, Interactive mockups, Design systems, Style guides"
     },
-    "stack": { "tools": ["figma", "sketch", "adobe", "invision"] },
-    "background": null,
-    "image": null,
-    "layout": "default"
+    "stack": {
+      "tools": [
+        "figma",
+        "sketch",
+        "adobe",
+        "invision"
+      ]
+    }
   },
   {
     "id": "integrate",
@@ -75,11 +84,21 @@
       "Outcomes": "Usability testing, User feedback loops, Design iteration"
     },
     "stack": {
-      "tools": ["visualstudiocode", "bruno", "copilot", "html", "css", "javascript", "typescript", "d3", "react", "tailwind", "python", "git"]
-    },
-    "background": null,
-    "image": null,
-    "layout": "reverse"
+      "tools": [
+        "visualstudiocode",
+        "bruno",
+        "copilot",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "d3",
+        "react",
+        "tailwind",
+        "python",
+        "git"
+      ]
+    }
   },
   {
     "id": "deliver",
@@ -97,9 +116,13 @@
       "Outcomes": "Production deployment, Analytics dashboards, Feedback collection",
       "Methods": "Post-launch monitoring, Continuous improvement, User feedback loops"
     },
-    "stack": { "tools": ["github", "vercel", "notion", "trello"] },
-    "background": null,
-    "image": null,
-    "layout": "default"
+    "stack": {
+      "tools": [
+        "github",
+        "vercel",
+        "notion",
+        "trello"
+      ]
+    }
   }
 ]
