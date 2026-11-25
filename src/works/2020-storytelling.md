@@ -2,11 +2,12 @@
 title: Interaction Design & Data Storytelling
 ---
 
-<header class="p-6">
+<header class="p-6 bg-secondary fg-white">
 
-2023 - 2025 | Working at [Siris Academic](https://www.sirisacademic.com/)
+2014 - 2026 | Selected experiences 3/3
+#### Data visualization: Presentation
 # Interaction Design & Data Storytelling
-### Narrative-driven interfaces for scientific and civic audiences
+## Narrative-driven interfaces
 
 ```js
 import {stack} from "../components/stack.js";
@@ -17,54 +18,17 @@ display(stack({
 
 </header>
 
-<div class="p-6 bg-1">
+<div class="p-6 alert theme-secondary rounded-0 border-0">
 
-### The projects
-
-Interactive dashboards, data exploration tools, and workflows designed to tell stories with data. I've worked across scientific and civic contexts, always focused on making complex information engaging and accessible.
-
-</div>
-
-<div class="p-6 bg-2">
-
-### [Ricerca e Innovazione in Emilia-Romagna](https://monitcoesione.emr.it/ricerca_e_innovazione/)
-
-```js
-import {gallery} from "../components/gallery.js";
-
-display(gallery([
-  {src: FileAttachment("../images/storytelling/ricerca-innovazione-emilia-romagna.gif"), caption: "Ricerca e Innovazione in Emilia-Romagna: scrolling through the map-driven narrative."},
-  {src: FileAttachment("../images/storytelling/portfolio-discovery.png"), caption: "Interactive environments revealing insights progressively as users explore."},
-]));
-```
-
-### [Digitalizzazione in Emilia-Romagna](https://monitcoesione.emr.it/digitalizzazione/)
-
-```js
-display(gallery([
-  {src: FileAttachment("../images/storytelling/digitalizzazione-emilia-romagna.gif"), caption: "Digitalizzazione in Emilia-Romagna: scroll-driven storytelling panels."},
-  {src: FileAttachment("../images/storytelling/portfolio-integration.png"), caption: "Visual systems supporting both guided narratives and open exploration."},
-]));
-```
-
-### [Science for SDGs](https://science4sdgs.sirisacademic.com/)
-
-```js
-display(gallery([
-  {src: FileAttachment("../images/storytelling/science-for-sdgs.gif"), caption: "Science for SDGs: charts and narrative revealed as the user scrolls."},
-  {src: FileAttachment("../images/ssdg/siris_02.png"), caption: "Extensive data driven visual narratives."},
-  {src: FileAttachment("../images/ssdg/detail-multi.png"), caption: "Example: small multiples."},
-  {src: FileAttachment("../images/ssdg/detail-flowers.png"), caption: "Example: interactive radar plot."},
-]));
-```
+*This particular selection of works during my career are a selection of data based and narrative projects. I led design and development of interactive experiences combining data visualization with storytelling—translating complex datasets into interfaces that guide users through information discovery.*
 
 </div>
 
 <div class="p-6">
 
-### My role
+### Process and parts
 
-I led design and development of interactive experiences combining data visualization with storytelling—translating complex datasets into interfaces that guide users through information discovery.
+
 
 | Explore                    | Define                   | Integrate                       |
 | -------------------------- | ------------------------ | ------------------------------- |
@@ -72,8 +36,130 @@ I led design and development of interactive experiences combining data visualiza
 | Data narrative exploration | Information architecture | Custom visualization components |
 |                            | Visual storytelling      | Responsive implementation       |
 
+</div>
+
+<div class="p-6">
+
+
 **The challenge:** Balancing narrative structure with exploratory freedom—guiding users through complex data while allowing them to discover insights independently.
 
 **The opportunity:** Working with diverse audiences and data types, finding the right storytelling approach for each context.
 
+</div>
+
+<div class="container-fluid">
+<!-- Start work card section -->
+<div class="row rounded-9 border border-black overflow-hidden m-6">
+<div class="col">
+  <figure class="m-0">
+    <img class="d-block img-fluid" src="../images/2025-fundecyt/portfolio-exploration.png" alt="Application screenshots mosaic" loading="lazy" />
+  </figure>
+</div>
+<div class="col-4 p-6 ps-0">
+
+  2025
+  ### Ris3 Extremadura
+  [Visit the project](https://especializacion.ris3extremadura.es/#inicio)
+
+  *Charts and narrative revealed as the user scrolls.
+  Extensive data driven visual narratives.*
+
+  ---
+  working at: [Siris Academic](https://sirisacademic.com)
+
+</div>
+</div>
+<!-- End work card section -->
+
+<div class="row rounded-9 border border-black overflow-hidden m-6">
+
+<div class="col-4 p-6 pe-0">
+
+2022
+## La politica di coesione
+[Visit project](https://monitcoesione.emr.it/ricerca_e_innovazione/)
+
+*Collection of data stories for public administrations, policies*
+
+- Visual systems supporting both guided narratives and open exploration.
+- Interactive environments revealing insights progressively as users explore.
+
+---
+working at: [Siris Academic](https://sirisacademic.com)
+
+</div>
+
+<div class="col">
+
+<div class="d-flex flex-column gap-4">
+
+  <figure class="m-0">
+    <img class="d-block ms-auto img-fluid" src="../images/storytelling/ricerca-innovazione-emilia-romagna.gif" alt="Album detail" loading="lazy" />
+  </figure>
+</div>
+
+</div>
+
+</div>
+<!-- Start work card section -->
+<div class="row rounded-9 border border-black overflow-hidden m-6">
+<div class="col">
+  <figure class="m-0">
+    <img class="d-block img-fluid" src="../images/storytelling/science-for-sdgs.gif" alt="Album detail" loading="lazy" />
+  </figure>
+</div>
+<div class="col-4 p-6 ps-0">
+
+  2020
+  ### Science for SDGs
+  [Visit the project](https://science4sdgs.sirisacademic.com/)
+
+  *Charts and narrative revealed as the user scrolls.
+  Extensive data driven visual narratives.*
+
+  ---
+  working at: [Siris Academic](https://sirisacademic.com)
+
+</div>
+</div>
+<!-- End work card section -->
+
+<div class="row rounded-9 border border-black overflow-hidden m-6">
+
+<div class="col-4 p-6 pe-0">
+
+2017
+## Third Pole Geolab
+[Visit the project](http://www.thirdpolegeolab.org)
+
+*Style and code web-template for custom interactive maps loading dynamic data*
+
+- Integrate the GIS layers into the web environment and synchronise them with the scroll interaction.
+- Structure and prepare the web components to accommodate data from different countries.
+
+
+```js
+import {stack} from "../components/stack.js";
+display(stack({
+  tools: ["html", "css", "javascript", "d3", "leaflet", "git"], // TODO: review
+}));
+```
+
+---
+client: [One Big Robot](https://www.onebigrobot.com/)
+
+</div>
+
+<div class="col">
+
+<div class="d-flex flex-column gap-4">
+
+  <figure class="m-0">
+    <img class="d-block ms-auto img-fluid" src="../images/2017-third-pole/map.png" alt="Detail map" loading="lazy" />
+  </figure>
+</div>
+
+</div>
+
+</div>
 </div>

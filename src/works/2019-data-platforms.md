@@ -53,7 +53,7 @@ display(gallery([
 ]));
 ```
 
-[RIS3-MCAT]((https://economia.gencat.cat/ca/ambits-actuacio/ris3cat/2030/monitoratge/plataforma-ris3mcat/)) 
+[RIS3-MCAT](https://economia.gencat.cat/ca/ambits-actuacio/ris3cat/2030/monitoratge/plataforma-ris3mcat/)
 
 ### Design system for monitoring dashboards
 *Design system: a unified system adaptable across regional platforms.*

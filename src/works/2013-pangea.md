@@ -5,7 +5,7 @@ published: "2013-05-01T17:37:58"
 year: 2013
 ---
 
-<header class="p-6">
+<header class="p-6 bg-primary fg-white">
 
 2013 - 2026
 ## Pangea Low Cost
@@ -23,30 +23,45 @@ display(stack({
 
 </div>
 
+
+</header>
+
+<div class="p-6 alert theme-primary rounded-0 border-0">
+
 *On a normal map, a city 2,000 km away always looks farther than a city 500 km away. Pangea redraws the map around your departure airport: a cheap flight pulls its destination closer, and an expensive flight pushes it away.*
+
+</div>
+
+<div class="p-6">
+
+#### tech stack
 
 ```js
 display(stack({
   tools: ["html", "css", "javascript", "d3"], // TODO: review (PHP backend?)
 }));
 ```
+</div>
 
+  <div class="p-6 bg-1">
+
+##### Exploratory data tool
+### Flight Price based Mapa Mundi
 [Visit the project](https://pangea.hermesite.net/)
+</div>
 
-</header>
-
-<div class="d-flex flex-column gap-7">
+<div class="d-flex bg-1 p-6 gap-4 pt-0">
   <figure class="m-0">
     <img class="d-block mx-auto img-fluid" src="../images/2013-pangea/01-folding-map.png" alt="Pangea Folding Map" loading="lazy" />
-    <figcaption class="gallery-caption">Pangea Folding Maps</figcaption>
+    <figcaption class="py-2 mt-3 fs-sm">Pangea Folding Maps</figcaption>
   </figure>
   <figure class="m-0">
     <img class="d-block mx-auto img-fluid" src="../images/2013-pangea/02-all-destinations.png" alt="Album detail" loading="lazy" />
-    <figcaption class="gallery-caption">All destinations</figcaption>
+    <figcaption class="py-2 mt-3 fs-sm">All destinations</figcaption>
   </figure>
   <figure class="m-0">
-    <img class="d-block mx-auto img-fluid" src="../images/2013-pangea/02-one-destination.png" alt="Album detail" loading="lazy" />
-    <figcaption class="gallery-caption">One destination</figcaption>
+    <img class="d-block mx-auto img-fluid" src="../images/2013-pangea/03-one-destination.png" alt="Album detail" loading="lazy" />
+    <figcaption class="py-2 mt-3 fs-sm">One destination</figcaption>
   </figure>
 </div>
 
