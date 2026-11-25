@@ -7,7 +7,7 @@ export { catalog };
 // SVG markup per react-icons name, rendered at build time by data/icons.json.js.
 const icons = await FileAttachment("../data/icons.json").json();
 
-// Styles live in the design system (design-system/src/components/stack.css).
+// Styles live in the project styles (src/styles/components/stack.css).
 
 const titles = { tools: "Tools", process: "Process", disciplines: "Disciplines", social: "Social Networks" };
 

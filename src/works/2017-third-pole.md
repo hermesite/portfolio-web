@@ -26,6 +26,7 @@ display(stack({
 
 *I collaborated in this project creating and integrating a consistent, multipurpose template that could represent the particularities of the different areas of interest.*
 
+## My role
 **The main challenges were:**
 - Integrate the GIS layers into the web environment and synchronise them with the scroll interaction.
 - Structure and prepare the web components to accommodate data from different countries.
@@ -46,6 +47,8 @@ display(stack({
 </div>
 
 <div class="p-6 bg-2">
+
+## The project
 
 ```js
 import {gallery} from "../components/gallery.js";

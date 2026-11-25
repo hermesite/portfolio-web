@@ -16,7 +16,7 @@ import { stack, ink } from "./stack.js";
  *   details?: Record<string, string>,
  *   stack?: Parameters<typeof stack>[0],
  * }[]} phases
- * `background` overrides the phase color (--color-phase-<id>, set by the design system) and is any CSS color; `image` is an image path or URL; `layout: "reverse"` swaps the two columns.
+ * `background` overrides the phase color (--color-phase-<id>, set in src/styles/tokens/colors.css) and is any CSS color; `image` is an image path or URL; `layout: "reverse"` swaps the two columns.
  * A local `image` is only copied to the build when it is listed in `dynamicPaths` in the config.
  */
 export function processCards(phases) {
@@ -27,20 +27,20 @@ export function processCards(phases) {
       <header class="process-card-header" type="button" data-bs-toggle="collapse" data-bs-target="#${uniqueId}" aria-expanded="false" aria-controls="${uniqueId}" title="Toggle details">
         <div class="process-card-header-content">
           <h3>${title}</h3>
-          <p class="mb-0"><em>${summary}</em></p>
-        </div>
+          </div>
           <svg class="process-card-toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="6 9 12 15 18 9"></polyline>
+          <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-      </header>
-      <div class="process-card-body bg-muted-secondary bg-20 collapse" id="${uniqueId}">
-        <h4>${cardTitle ?? "Key Activities"}</h4>
-        <p class=""><em>${cardDescription ?? ""}</em></p>
-        <ul class="section-activities">${activities.map((activity) => html`<li class="section-activity">${activity}</li>`)}</ul>
-        ${used ? html`<div class="section-stack pb-0">${stack(used)}</div>` : null}
-        ${details ? html`<table class="table mb-0">
-          <tbody>${Object.entries(details).map(([label, value]) => html`<tr><th class="bg-transparent fg-white">${label}</th><td class="bg-transparent fg-white">${value}</td></tr>`)}</tbody>
-        </table>` : null}
+          </header>
+        <div class="process-card-body bg-muted-secondary bg-20 collapse" id="${uniqueId}">
+          <p class="fs-lg"><em>${summary}</em></p>
+          <h4>${cardTitle ?? "Key Activities"}</h4>
+          <p class=""><em>${cardDescription ?? ""}</em></p>
+          <ul class="section-activities">${activities.map((activity) => html`<li class="section-activity">${activity}</li>`)}</ul>
+          ${used ? html`<div class="section-stack pb-0">${stack(used)}</div>` : null}
+          ${details ? html`<table class="table mb-0">
+            <tbody>${Object.entries(details).map(([label, value]) => html`<tr><th class="bg-transparent fg-white">${label}</th><td class="bg-transparent fg-white">${value}</td></tr>`)}</tbody>
+          </table>` : null}
       </div>
     </section>`;
   })}`;

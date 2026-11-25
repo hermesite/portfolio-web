@@ -2,9 +2,9 @@ import { html } from "npm:htl";
 import { breadcrumb } from "./breadcrumb.js";
 import { pages } from "./pages.js";
 
-// Styles live in the design system (design-system/src/components/workspace.css).
+// Styles live in the project styles (src/styles/components/workspace.css).
 const FRAME = "workspace-stage";
-const HOME = { name: "Process", path: "/sections/process" };
+const HOME = { name: "Presentation", path: "/sections/presentation" };
 const SMALL_SCREEN = "(max-width: 1023.98px)";
 // Fired on the document when a page is picked, so the menu and the stage breadcrumb stay in sync.
 const SELECT_EVENT = "workspace:select";
@@ -37,9 +37,9 @@ export function workspaceMenu(pages) {
   const groups = [{ pages: [HOME] }, ...pages];
   const menu = html`<div class="workspace-menu-list">${groups.map(
     ({ name, pages }) => html`<section>
-      ${name ? html`<h2 class="h6 fg-3 text-uppercase px-5 pt-5 mb-3">${name}</h2>` : null}
+      ${name ? html`<h2 class="h6 fw-normal fg-white text-uppercase px-5 pt-5 mb-3">${name}</h2>` : null}
       <div class="list-group list-group-flush">${pages.map(
-        (page) => html`<a class="list-group-item list-group-item-action" href=${url(page.path)} target=${FRAME} data-path=${page.path}>${page.name}</a>`
+        (page) => html`<a class="list-group-item list-group-item-action fs-lg" href=${url(page.path)} target=${FRAME} data-path=${page.path}>${page.name}</a>`
       )}</div>
     </section>`
   )}</div>`;

@@ -29,7 +29,8 @@ This project follows the typical Framework layout, with a few project-specific f
 │  ├─ data
 │  │  ├─ launches.csv.js       # a data loader
 │  │  └─ events.json           # a static data file
-│  ├─ design-system            # living examples of the design system (overview, tokens, components)
+│  ├─ design-system            # living examples of the styles (overview, tokens, components)
+│  ├─ styles                   # embedded Bootstrap 6 based styles (see below)
 │  ├─ works, ...               # portfolio content pages
 │  ├─ shell.js                 # page shell script loaded from the config `head`
 │  ├─ style.css                # app stylesheet (replaces Observable's default theme)
@@ -40,7 +41,28 @@ This project follows the typical Framework layout, with a few project-specific f
 └─ README.md
 ```
 
-The styles come from the [design system](../design-system/README.md), a Bootstrap 6 based stylesheet. Its living examples are served at `/design-system/` (see the design system README for how to run them).
+## Styles
+
+The styles live in `src/styles` and are part of this project; there is no external design system dependency. [Bootstrap](https://getbootstrap.com/docs/6.0/) 6 (`6.0.0-alpha.2`, pinned in `package.json`) is the scaffolding and the project styles evolve on top of it. Bootstrap 6 needs Chrome/Edge 130, Firefox 132 or Safari 18.
+
+`src/style.css` is the app stylesheet declared in the config (`style`). It imports Observable's code output renderers, `src/styles/index.css` and the Observable page shell rules. Load order matters; each step overrides the previous one:
+
+```
+src/styles
+├─ index.css        # entry point (imports everything, in order)
+├─ fonts.css        # Google Fonts import (Kreon, Big Shoulders, Roboto Condensed)
+├─ bootstrap.css    # imports Bootstrap's CSS from node_modules
+├─ tokens/          # raw design values (colors, typography, spacing)
+├─ variables.css    # maps the tokens onto Bootstrap's --bs-* variables
+├─ overrides/       # changes to existing Bootstrap components and elements
+├─ components/      # new components Bootstrap does not have (section, process phase, stack, gallery, workspace)
+├─ utilities/       # custom utility classes
+└─ breakpoints/     # base.css (mobile) + sm, md, lg, xl, 2xl
+```
+
+Bootstrap 6 ships its CSS in `@layer`s. Everything after Bootstrap is imported with `layer(custom)`, so it beats Bootstrap's components but not its helpers and utilities. `variables.css` is imported **unlayered** on purpose: the pinned Bootstrap alpha declares its root custom properties unlayered, so a layered file would never override them.
+
+The living examples are served at `/design-system/`.
 
 **`src`** - This is the “source root” — where your source files live. Pages go here. Each page is a Markdown file. Observable Framework uses [file-based routing](https://observablehq.com/framework/project-structure#routing), which means that the name of the file controls where the page is served. You can create as many pages as you like. Use folders to organize your pages.
 
@@ -62,7 +84,6 @@ The navbar (`#main-navbar`) shows the last git tag and the build date on its rig
 | ----------------- | -------------------------------------------------------- |
 | `npm install`            | Install or reinstall dependencies                        |
 | `npm run dev`        | Start local preview server                               |
-| `npm run dev:local`  | Link the local `../design-system` and start the preview, so its CSS edits show up (re-link after `npm install`) |
 | `npm run build`      | Build your static site, generating `./dist`              |
 | `npm run deploy`     | Deploy your app to Observable                            |
 | `npm run clean`      | Clear the local data loader cache                        |

@@ -36,7 +36,10 @@ I designed and developed accessible frontend interfaces for structured research 
 
 </div>
 
+
 <div class="p-6 bg-2">
+
+### The projects
 
 <div class="card">
 

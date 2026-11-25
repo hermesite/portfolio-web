@@ -44,6 +44,6 @@ The stylesheet is loaded in this order:
 4. **Overrides** adjust existing Bootstrap elements.
 5. **Components, utilities, and breakpoints** add the project's own patterns and responsive rules.
 
-The design system itself is CSS. These examples use the existing Observable app to load it; interactive Bootstrap components and the gallery, stack, and workspace also use the app's JavaScript.
+The styles are plain CSS in `src/styles`, embedded in this project on top of Bootstrap. These examples use the Observable app to load them; interactive Bootstrap components and the gallery, stack, and workspace also use the app's JavaScript.
 
 `variables.css` is imported unlayered so its mappings beat Bootstrap's unlayered root defaults; changing a token therefore restyles every component that reads it. The [token examples](./tokens#bootstrap-mapping) show the raw tokens beside the resulting Bootstrap values.

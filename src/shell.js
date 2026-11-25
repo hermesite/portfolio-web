@@ -1,4 +1,4 @@
-import {ScrollSpy} from "npm:bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js";
+import {ScrollSpy} from "npm:bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js";
 
 // Mark the navbar link of the current page.
 const here = location.pathname.replace(/(\.html|\/)$/, "") || "/index";

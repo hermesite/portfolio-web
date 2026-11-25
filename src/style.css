@@ -1,11 +1,11 @@
-/* Observable's default styles and theme are not loaded: Bootstrap and the design system own the look.
+/* Observable's default styles and theme are not loaded: Bootstrap and the styles in ./styles own the look.
    Only the renderers for code output (inspector, plots, syntax highlighting) are kept, in the lowest layer. */
 @import "../node_modules/@observablehq/framework/dist/style/abstract-light.css" layer(observable);
 @import "../node_modules/@observablehq/framework/dist/style/inspector.css" layer(observable);
 @import "../node_modules/@observablehq/framework/dist/style/plot.css" layer(observable);
-@import "../node_modules/design-system/index.css";
+@import "./styles/index.css";
 
-/* Variables the kept Observable styles read, mapped to the design system. */
+/* Variables the kept Observable styles read, mapped to the project tokens. */
 :root {
   color-scheme: light;
   --serif: var(--font-family-sans);
@@ -20,6 +20,10 @@
 /* Observable wraps every code output in .observablehq--block and gives it a vertical margin (inspector.css). */
 .observablehq--block {
   margin: 0;
+}
+
+.workspace-about {
+  min-height: 50vh;
 }
 
 /* Pushes the footer of the home first panel to its bottom (unlayered so it wins over the rule above). */
@@ -48,7 +52,7 @@
   padding-block: 1.5rem;
   /* max-width: 75rem; */
   /* margin-inline: auto; */
-  border: var(--bs-border-width) solid var(--bs-border-color);
+  /* border: var(--bs-border-width) solid var(--bs-border-color); */
 }
 
 #observablehq-footer {

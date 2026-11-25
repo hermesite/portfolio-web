@@ -9,5 +9,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Initial public release of the portfolio, built with Observable Framework on top of the [design-system](https://github.com/hermesite/design-system).
+- Initial public release of the portfolio, built with Observable Framework on top of Bootstrap 6, with the styles embedded in `src/styles`.
 - App version (last git tag) and build date in the navbar and the common footer, linking to this changelog.

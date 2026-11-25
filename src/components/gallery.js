@@ -1,6 +1,6 @@
 import { html } from "npm:htl";
 
-// Styles live in the design system (design-system/src/components/gallery.css).
+// Styles live in the project styles (src/styles/components/gallery.css).
 const SMALL_SCREEN = "(max-width: 640px)";
 
 /**

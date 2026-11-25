@@ -11,7 +11,7 @@ toc: true
 
 # Components
 
-Some everyday Bootstrap elements and the custom patterns used by this project, shown with the actual design-system styles.
+Some everyday Bootstrap elements and the custom patterns used by this project, shown with the actual styles from `src/styles`.
 
 ## Bootstrap components
 

@@ -11,7 +11,7 @@ toc: true
 
 # Tokens and layout
 
-The swatches and values below come from the loaded design-system stylesheet. Change a token and refresh the page to see the result.
+The swatches and values below come from the loaded stylesheet (`src/styles`). Change a token and refresh the page to see the result.
 
 ```js
 import {colorSwatches, typefaceSamples, tokenTable} from "./examples.js";
