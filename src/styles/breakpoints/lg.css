@@ -1,6 +1,6 @@
 @media (min-width: 1024px) {
   .workspace {
-    grid-template-columns: minmax(16rem, 24rem) minmax(14rem, 18rem) minmax(0, 1fr);
+    grid-template-columns: minmax(12rem, 16rem) minmax(14rem, 18rem) minmax(0, 1fr);
     height: 100dvh;
   }
 
@@ -12,7 +12,6 @@
 
   .workspace-about {
     padding: 2rem 1.5rem;
-    border-inline-end: var(--bs-border-width) solid var(--bs-border-color);
   }
 
   .workspace-menu {

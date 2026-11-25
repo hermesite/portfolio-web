@@ -1,14 +1,23 @@
 import { html } from "npm:htl";
+import { FileAttachment } from "observablehq:stdlib";
 import { breadcrumb } from "./breadcrumb.js";
 import { pages } from "./pages.js";
 
+// SVG markup per react-icons name, rendered at build time by data/icons.json.js.
+const icons = await FileAttachment("../data/icons.json").json();
+
 // Styles live in the project styles (src/styles/components/workspace.css).
 const FRAME = "workspace-stage";
-const HOME = { name: "Presentation", path: "/sections/presentation" };
+const HOME = { name: "Hello!", path: "/sections/presentation" };
 const SMALL_SCREEN = "(max-width: 1023.98px)";
 // Fired on the document when a page is picked, so the menu and the stage breadcrumb stay in sync.
 const SELECT_EVENT = "workspace:select";
 
+const arrow = () => {
+  const span = html`<span class="workspace-menu-arrow flex-shrink-0" aria-hidden="true"></span>`;
+  span.innerHTML = icons.FaArrowRight;
+  return span;
+};
 const url = (path) => new URL(`.${path}`, document.baseURI).href;
 const select = (path) => document.dispatchEvent(new CustomEvent(SELECT_EVENT, { detail: { path } }));
 
@@ -31,15 +40,21 @@ function trail(path) {
 /**
  * Menu of pages grouped by category, always expanded. Links load into the
  * stage iframe; the first entry brings back the default content.
- * @param {{name: string, pages: {name: string, path: string}[]}[]} pages
+ * @param {{name: string, pages: {name: string, path: string, lead?: string}[]}[]} pages
  */
 export function workspaceMenu(pages) {
   const groups = [{ pages: [HOME] }, ...pages];
   const menu = html`<div class="workspace-menu-list">${groups.map(
     ({ name, pages }) => html`<section>
-      ${name ? html`<h2 class="h6 fw-normal fg-white text-uppercase px-5 pt-5 mb-3">${name}</h2>` : null}
-      <div class="list-group list-group-flush">${pages.map(
-        (page) => html`<a class="list-group-item list-group-item-action fs-lg" href=${url(page.path)} target=${FRAME} data-path=${page.path}>${page.name}</a>`
+      ${name ? html`<h2 class="h6 fw-normal fg-white fg-opacity-50 text-uppercase px-5 pt-5 mb-3">${name}</h2>` : null}
+      <div class="list-group list-group-flush border-0">${pages.map(
+        (page) => html`<a class="list-group-item list-group-item-action d-flex align-items-center justify-content-between gap-3 fs-lg py-5 bg-opacity-10" href=${url(page.path)} target=${FRAME} data-path=${page.path}>
+          <span class="workspace-menu-item-copy">
+            <span class="d-block">${page.name}</span>
+            ${page.lead ? html`<span class="d-block fs-sm fw-normal mt-1">${page.lead}</span>` : null}
+          </span>
+          ${arrow()}
+        </a>`
       )}</div>
     </section>`
   )}</div>`;
@@ -71,7 +86,7 @@ export function workspaceMenu(pages) {
 /** Breadcrumb on top of an iframe that shows the process page by default and the page picked in the menu. */
 export function workspaceStage() {
   const initial = pathFromHash();
-  const bar = html`<div class="workspace-stage-bar px-4"></div>`;
+  const bar = html`<div class="workspace-stage-bar p-4"></div>`;
   const render = (path) => {
     bar.replaceChildren(breadcrumb(trail(path)));
     // The Home link navigates the iframe itself; tell the menu about it.

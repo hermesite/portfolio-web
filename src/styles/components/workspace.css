@@ -35,6 +35,20 @@
   padding-bottom: 1rem;
 }
 
+.workspace-menu-list .list-group-item {
+  border: 0;
+}
+
+/* The arrow only shows on the active item. */
+.workspace-menu-arrow {
+  display: none;
+  line-height: 0;
+}
+
+.workspace-menu .active .workspace-menu-arrow {
+  display: inline-flex;
+}
+
 .workspace-stage {
   display: flex;
   flex-direction: column;

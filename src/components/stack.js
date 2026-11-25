@@ -58,7 +58,7 @@ export function stack(used) {
         const filled = category === "disciplines" && color;
         const style = color ? `--stack-color: ${color}${filled ? `; --stack-ink: ${ink(color)}` : ""}` : null;
         const base = "stack-item d-inline-flex align-items-center gap-3 m-0";
-        const itemClass = mark ? `${base} stack-item-icon` : filled ? `${base} stack-item-outline badge badge-outline fs-md` : `${base} px-5 py-1`;
+        const itemClass = mark ? `${base} stack-item-icon` : filled ? `${base} stack-item-outline badge badge-outline fs-md border border-white` : `${base} px-5 py-1`;
         // Icon-only items keep the label for tooltips and screen readers.
         const content = [
           mark || (color && !filled ? html`<span class="stack-dot rounded-circle flex-shrink-0" aria-hidden="true"></span>` : null),

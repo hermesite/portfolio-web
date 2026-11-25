@@ -9,7 +9,7 @@ export function breadcrumb(items) {
   const last = items.length - 1;
   return html`<nav aria-label="breadcrumb">
     <ol class="breadcrumb">${items.flatMap((item, i) => [
-      i > 0 ? html`<li class="breadcrumb-divider"></li>` : null,
+      i > 0 ? html`<li class="breadcrumb-divider">/</li>` : null,
       html`<li class="breadcrumb-item">${
         i === last
           ? html`<span class="breadcrumb-link active" aria-current="page">${item.name}</span>`

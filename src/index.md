@@ -6,14 +6,12 @@ title: "Hermes Carretero - Personal site"
 
 <section class="workspace-pane workspace-about bg-inverse fg-white">
 
-<header>
+<header class="md:text-end">
 
 # Hermes Carretero
 
 
-I am a software designer and developer specialized in data-based interfaces and interaction and data visualization techniques.
-
-I'm currently involved in the creation of a data products studio creation named [Dataglow Studio](https://dataglow.studio)
+Hello, I am a **designer & developer** specialising in data visualisation, with extensive experience in producing complex interfaces and data-based products.
 
 </header>
 
@@ -32,7 +30,8 @@ display(Object.assign(document.createElement("footer"), {className: "workspace-a
 
 </section>
 
-<nav class="workspace-pane workspace-menu theme-primary bg-inverse bg-opacity-70" aria-label="Works">
+<nav class="workspace-pane workspace-menu theme-primary bg-black bg-opacity-80" aria-label="Works">
+
 
 ```js
 import {pages} from "./components/pages.js";

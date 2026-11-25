@@ -13,7 +13,9 @@ const icons = {...si, ...di, ...bi, ...fa};
 const svgs = {};
 for (const {icon} of [
   ...Object.values(catalog.tools),
-  ...Object.values(catalog.social)
+  ...Object.values(catalog.social),
+  // Icons used by the interface itself.
+  {icon: "FaArrowRight"}
 ]) {
   if (!icon) continue;
   const Icon = icons[icon];
